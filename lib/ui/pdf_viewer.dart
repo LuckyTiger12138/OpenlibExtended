@@ -41,7 +41,8 @@ Future<void> launchPdfViewer(
       if (context.mounted) {
         showSnackBar(
             context: context,
-            message: "File not found. The download may have failed.");
+            message:
+                AppLocalizations.of(context).fileNotFoundDownloadFailed);
       }
     }
   } else {
@@ -182,8 +183,9 @@ class _PdfViewPageState extends ConsumerState<PdfViewPage> {
                   ),
                 );
               },
-              error: (err, stack) =>
-                  Center(child: Text("Error loading book: $err")),
+              error: (err, stack) => Center(
+                  child: Text(AppLocalizations.of(context)
+                      .errorLoadingBook(err.toString()))),
               loading: () => Center(
                 child: CircularProgressIndicator(
                   color: Theme.of(context).colorScheme.secondary,

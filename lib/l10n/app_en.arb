@@ -955,5 +955,801 @@
   "whatsNewFeatureCovers": "Missing LibGen covers are fetched from the book's detail page.",
   "@whatsNewFeatureCovers": {
     "description": "Release note about the lazy cover fix"
+  },
+  "searchFieldEmpty": "Search field is empty",
+  "@searchFieldEmpty": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "searchHint": "Search",
+  "@searchHint": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "filterType": "Type",
+  "@filterType": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "filterSortBy": "Sort by",
+  "@filterSortBy": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "filterFileType": "File type",
+  "@filterFileType": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "filterLanguage": "Language",
+  "@filterLanguage": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "filterYearPublished": "Year Published",
+  "@filterYearPublished": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "optionAll": "All",
+  "@optionAll": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "optionAnyBooks": "Any Books",
+  "@optionAnyBooks": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "optionUnknownBooks": "Unknown Books",
+  "@optionUnknownBooks": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "optionFictionBooks": "Fiction Books",
+  "@optionFictionBooks": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "optionNonfictionBooks": "Non-fiction Books",
+  "@optionNonfictionBooks": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "optionComicBooks": "Comic Books",
+  "@optionComicBooks": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "optionMagazine": "Magazine",
+  "@optionMagazine": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "optionStandardsDocument": "Standards Document",
+  "@optionStandardsDocument": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "optionJournalArticle": "Journal Article",
+  "@optionJournalArticle": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "optionMostRelevant": "Most Relevant",
+  "@optionMostRelevant": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "optionNewest": "Newest",
+  "@optionNewest": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "optionOldest": "Oldest",
+  "@optionOldest": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "optionLargest": "Largest",
+  "@optionLargest": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "optionSmallest": "Smallest",
+  "@optionSmallest": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langEnglish": "English",
+  "@langEnglish": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langSpanish": "Spanish",
+  "@langSpanish": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langFrench": "French",
+  "@langFrench": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langGerman": "German",
+  "@langGerman": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langItalian": "Italian",
+  "@langItalian": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langPortuguese": "Portuguese",
+  "@langPortuguese": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langRussian": "Russian",
+  "@langRussian": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langChinese": "Chinese",
+  "@langChinese": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langJapanese": "Japanese",
+  "@langJapanese": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langKorean": "Korean",
+  "@langKorean": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langArabic": "Arabic",
+  "@langArabic": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langHindi": "Hindi",
+  "@langHindi": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langMalayalam": "Malayalam",
+  "@langMalayalam": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langDutch": "Dutch",
+  "@langDutch": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langPolish": "Polish",
+  "@langPolish": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langTurkish": "Turkish",
+  "@langTurkish": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langSwedish": "Swedish",
+  "@langSwedish": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langIndonesian": "Indonesian",
+  "@langIndonesian": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langVietnamese": "Vietnamese",
+  "@langVietnamese": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langCzech": "Czech",
+  "@langCzech": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langGreek": "Greek",
+  "@langGreek": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langRomanian": "Romanian",
+  "@langRomanian": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langHungarian": "Hungarian",
+  "@langHungarian": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langUkrainian": "Ukrainian",
+  "@langUkrainian": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langHebrew": "Hebrew",
+  "@langHebrew": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langThai": "Thai",
+  "@langThai": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langPersian": "Persian",
+  "@langPersian": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langBengali": "Bengali",
+  "@langBengali": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langFinnish": "Finnish",
+  "@langFinnish": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langNorwegian": "Norwegian",
+  "@langNorwegian": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "langDanish": "Danish",
+  "@langDanish": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreClassics": "Classics",
+  "@genreClassics": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreClassicsDesc": "Timeless literary works often revered for their artistic merit and cultural significance.",
+  "@genreClassicsDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreRomance": "Romance",
+  "@genreRomance": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreRomanceDesc": "Stories focused on romantic relationships, exploring love, passion, and emotional connections.",
+  "@genreRomanceDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreFiction": "Fiction",
+  "@genreFiction": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreFictionDesc": "Narrative literature created from the imagination, not based on real events.",
+  "@genreFictionDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreYoungAdult": "Young Adult",
+  "@genreYoungAdult": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreYoungAdultDesc": "Books targeted at teenage readers, addressing themes relevant to adolescence.",
+  "@genreYoungAdultDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreFantasy": "Fantasy",
+  "@genreFantasy": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreFantasyDesc": "A genre featuring magical elements, mythical creatures, and fantastical worlds.",
+  "@genreFantasyDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreScienceFiction": "Science Fiction",
+  "@genreScienceFiction": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreScienceFictionDesc": "Literature that explores futuristic concepts, advanced technology, and space exploration.",
+  "@genreScienceFictionDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreNonfiction": "Nonfiction",
+  "@genreNonfiction": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreNonfictionDesc": "Works based on factual information, including essays, biographies, and documentaries.",
+  "@genreNonfictionDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreChildren": "Children",
+  "@genreChildren": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreChildrenDesc": "Books aimed at young readers, often with illustrations and simple narratives.",
+  "@genreChildrenDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreHistory": "History",
+  "@genreHistory": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreHistoryDesc": "Literature that examines past events, cultures, and significant historical figures.",
+  "@genreHistoryDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreMystery": "Mystery",
+  "@genreMystery": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreMysteryDesc": "Stories centered around suspenseful plots, often involving crime or puzzles to solve.",
+  "@genreMysteryDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreCovers": "Covers",
+  "@genreCovers": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreCoversDesc": "Refers to the artwork and design that visually represents a book, influencing reader interest.",
+  "@genreCoversDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreHorror": "Horror",
+  "@genreHorror": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreHorrorDesc": "A genre designed to evoke fear, dread, or terror in the reader through suspenseful storytelling.",
+  "@genreHorrorDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreHistoricalFiction": "Historical Fiction",
+  "@genreHistoricalFiction": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreHistoricalFictionDesc": "Novels set in a specific historical period, blending factual events with fictional characters.",
+  "@genreHistoricalFictionDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreBest": "Best",
+  "@genreBest": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreBestDesc": "Often refers to critically acclaimed or popular books, usually categorized by rankings or awards.",
+  "@genreBestDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreTitles": "Titles",
+  "@genreTitles": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreTitlesDesc": "Refers to the names of books, which often reflect their themes or subject matter.",
+  "@genreTitlesDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreMiddleGrade": "Middle Grade",
+  "@genreMiddleGrade": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreMiddleGradeDesc": "Books intended for readers aged 8-12, featuring age-appropriate themes and characters.",
+  "@genreMiddleGradeDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreParanormal": "Paranormal",
+  "@genreParanormal": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreParanormalDesc": "Stories that incorporate supernatural elements, including ghosts, vampires, and otherworldly beings.",
+  "@genreParanormalDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreLove": "Love",
+  "@genreLove": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreLoveDesc": "A theme exploring the complexities and nuances of love in various forms and relationships.",
+  "@genreLoveDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreQueer": "Queer",
+  "@genreQueer": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreQueerDesc": "Literature that represents diverse sexual orientations and gender identities within the LGBTQ+ spectrum.",
+  "@genreQueerDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreNonfictionAdult": "Nonfiction",
+  "@genreNonfictionAdult": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreNonfictionAdultDesc": "Works based on factual information, including essays, biographies, and documentaries.",
+  "@genreNonfictionAdultDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreHistoricalRomance": "Historical Romance",
+  "@genreHistoricalRomance": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreHistoricalRomanceDesc": "Novels combining romantic plots set against a historical backdrop.",
+  "@genreHistoricalRomanceDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreContemporary": "Contemporary",
+  "@genreContemporary": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreContemporaryDesc": "Works set in modern times, often addressing current social issues and relatable characters.",
+  "@genreContemporaryDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreThriller": "Thriller",
+  "@genreThriller": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreThrillerDesc": "A suspenseful genre focused on excitement, tension, and unexpected twists.",
+  "@genreThrillerDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreWomen": "Women",
+  "@genreWomen": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreWomenDesc": "Literature that explores women's experiences, perspectives, and empowerment.",
+  "@genreWomenDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreBiography": "Biography",
+  "@genreBiography": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreBiographyDesc": "Nonfiction works detailing the life story of an individual, highlighting their achievements and challenges.",
+  "@genreBiographyDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreLgbtq": "LGBTQ",
+  "@genreLgbtq": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreLgbtqDesc": "Inclusive literature representing the experiences of the lesbian, gay, bisexual, transgender, and queer community.",
+  "@genreLgbtqDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreSeries": "Series",
+  "@genreSeries": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreSeriesDesc": "A collection of related books that follow a common storyline or set of characters.",
+  "@genreSeriesDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreTitleChallenge": "Title Challenge",
+  "@genreTitleChallenge": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "genreTitleChallengeDesc": "Refers to prompts or contests encouraging creative thinking about book titles.",
+  "@genreTitleChallengeDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "mirrorsTitle": "Mirrors",
+  "@mirrorsTitle": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "openSlumUnreachable": "Could not reach open-slum.org - no mirror list available",
+  "@openSlumUnreachable": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "mirrorListUpToDate": "Mirror list is up to date",
+  "@mirrorListUpToDate": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "mirrorListUpdated": "Mirror list updated: {count} change(s)",
+  "@mirrorListUpdated": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "mirrorRefreshFailed": "Refresh failed: {error}",
+  "@mirrorRefreshFailed": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "mirrorsIntro": "Mirror addresses and their status come from open-slum.org and refresh automatically. A mirror reported DOWN is never contacted.",
+  "@mirrorsIntro": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "mirrorAutoOrder": "Automatic mirror order",
+  "@mirrorAutoOrder": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "mirrorAutoOrderOn": "Easiest protection first, then fastest. Recommended.",
+  "@mirrorAutoOrderOn": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "mirrorAutoOrderOff": "Manual: use the arrows to set your own order.",
+  "@mirrorAutoOrderOff": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "serviceLibgenDesc": "Fast, challenge-free downloads when a mirror is up",
+  "@serviceLibgenDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "serviceZlibDesc": "DiamWall mirrors solve headlessly",
+  "@serviceZlibDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "serviceWelibDesc": "Cloudflare-gated search, open book pages",
+  "@serviceWelibDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "serviceAnnasDesc": "Reading, details and downloads",
+  "@serviceAnnasDesc": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "noMirrorsReported": "No mirrors reported",
+  "@noMirrorsReported": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "noMirrorsReportedHint": "open-slum.org has no entry (yet) or could not be reached.",
+  "@noMirrorsReportedHint": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "couldNotLoadMirrors": "Could not load mirrors",
+  "@couldNotLoadMirrors": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "mirrorReportedDown": "reported down - never contacted",
+  "@mirrorReportedDown": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "moveUp": "Move up",
+  "@moveUp": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "moveDown": "Move down",
+  "@moveDown": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "exportBackupTitle": "Export Backup",
+  "@exportBackupTitle": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "exportBackupSubtitle": "Save settings, books and instances to a JSON file",
+  "@exportBackupSubtitle": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "importBackupTitle": "Import Backup",
+  "@importBackupTitle": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "importBackupSubtitle": "Restore from a backup file (replaces current data)",
+  "@importBackupSubtitle": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "syncLibraryTooltip": "Sync library with storage folder",
+  "@syncLibraryTooltip": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "readerControls": "Reader Controls",
+  "@readerControls": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "helpArrowKeys": "Arrow Keys",
+  "@helpArrowKeys": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "helpTapSides": "Tap Sides",
+  "@helpTapSides": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "helpTurnPagesKeys": "Use Left/Right arrows to turn pages",
+  "@helpTurnPagesKeys": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "helpTurnPagesTap": "Tap left/right edges to turn pages",
+  "@helpTurnPagesTap": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "helpZoom": "Zoom",
+  "@helpZoom": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "helpZoomDesktop": "Use provided controls",
+  "@helpZoomDesktop": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "helpZoomPinch": "Pinch to zoom (PDF)",
+  "@helpZoomPinch": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "helpMenu": "Menu",
+  "@helpMenu": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "helpMenuDesktop": "Table of Contents via sidebar",
+  "@helpMenuDesktop": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "helpMenuTap": "Tap center or swipe for menu",
+  "@helpMenuTap": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "unableToOpenEpub": "Unable to open epub!",
+  "@unableToOpenEpub": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "fileNotFoundDownloadFailed": "File not found. The download may have failed.",
+  "@fileNotFoundDownloadFailed": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "errorLoadingBook": "Error loading book: {error}",
+  "@errorLoadingBook": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "couldNotOpenLink": "Could not open the link.",
+  "@couldNotOpenLink": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "permissionRequired": "Permission Required",
+  "@permissionRequired": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "installPermissionBody": "To install app updates, OpenlibExtended needs permission to install packages.\n\nThis allows the app to automatically install new versions with bug fixes and new features.\n\nYou will be taken to Settings to enable this permission.",
+  "@installPermissionBody": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "openSettings": "Open Settings",
+  "@openSettings": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "downloadedFileNotFound": "Downloaded file not found",
+  "@downloadedFileNotFound": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "downloadedFileCorrupted": "Downloaded file appears to be corrupted (only {size})",
+  "@downloadedFileCorrupted": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "installPermissionDeniedManual": "Permission to install apps was denied. You can still install manually.",
+  "@installPermissionDeniedManual": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "debugBuildWarning": "Debug Build Detected: Update may fail with 'App not installed' due to signature mismatch. Uninstall this app first.",
+  "@debugBuildWarning": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "openingInstallerHint": "Opening installer... If nothing happens, the install failed.",
+  "@openingInstallerHint": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "manualInstall": "Manual Install",
+  "@manualInstall": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "methodOpenFile": "Open File",
+  "@methodOpenFile": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "mayHaveFailedSilently": "May have failed silently",
+  "@mayHaveFailedSilently": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "failedInstallUpdate": "Failed to install update: {error}",
+  "@failedInstallUpdate": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "installationIssue": "Installation Issue",
+  "@installationIssue": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "installFallbackBody": "The automatic installer couldn't open the APK. This can happen on some Android versions.\n\nYou can install manually using one of these options:",
+  "@installFallbackBody": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "fileLabel": "File: {fileName}",
+  "@fileLabel": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "installationFailed": "Installation Failed",
+  "@installationFailed": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "methodsTried": "Methods tried:",
+  "@methodsTried": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "errorsEncountered": "Errors encountered:",
+  "@errorsEncountered": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "methodN": "Method {number}",
+  "@methodN": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "installationError": "Installation Error",
+  "@installationError": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "ok": "OK",
+  "@ok": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "tryManualInstall": "Try Manual Install",
+  "@tryManualInstall": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "downloadViaBrowser": "Download via Browser",
+  "@downloadViaBrowser": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "updateAvailable": "Update Available",
+  "@updateAvailable": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "versionIsAvailable": "Version {version} is available!",
+  "@versionIsAvailable": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "preRelease": "Pre-release",
+  "@preRelease": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "whatsNewLabel": "What's new:",
+  "@whatsNewLabel": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "later": "Later",
+  "@later": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "downloadAndInstall": "Download & Install",
+  "@downloadAndInstall": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "downloadFromGithub": "Download from GitHub",
+  "@downloadFromGithub": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "viewOnGithub": "View on GitHub",
+  "@viewOnGithub": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "downloadComplete": "Download Complete",
+  "@downloadComplete": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "downloadFailed": "Download Failed",
+  "@downloadFailed": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "downloadingUpdate": "Downloading Update",
+  "@downloadingUpdate": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "openingInstallerShort": "Opening installer...",
+  "@openingInstallerShort": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "connecting": "Connecting...",
+  "@connecting": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "notifAlreadyDownloading": "Already downloading: {title}",
+  "@notifAlreadyDownloading": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "notifQueued": "Queued: {title}",
+  "@notifQueued": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "notifPaused": "Paused",
+  "@notifPaused": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "notifManualVerification": "Manual verification needed",
+  "@notifManualVerification": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "notifFindingMirror": "Finding available mirror...",
+  "@notifFindingMirror": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "notifDownloadingFrom": "Downloading from {source}...",
+  "@notifDownloadingFrom": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "notifDownloading": "Downloading",
+  "@notifDownloading": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "notifDownloadingProgress": "Downloading... {percent}%",
+  "@notifDownloadingProgress": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "notifDownload": "Download",
+  "@notifDownload": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "notifFailed": "Failed: {message}",
+  "@notifFailed": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "notifVerifyingFile": "Verifying file...",
+  "@notifVerifyingFile": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "notifDownloadCompleted": "Download completed!",
+  "@notifDownloadCompleted": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "notifDownloadCompletedChecksumFailed": "Download completed (checksum failed)",
+  "@notifDownloadCompletedChecksumFailed": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "methodApkSideload": "APK Sideload",
+  "@methodApkSideload": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "methodPackageInstaller": "Package Installer",
+  "@methodPackageInstaller": {
+    "description": "UI string extracted for full Chinese localization"
+  },
+  "versionShort": "Version {version}",
+  "@versionShort": {
+    "description": "UI string extracted for full Chinese localization"
   }
 }

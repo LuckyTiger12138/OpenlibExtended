@@ -815,14 +815,14 @@ class _BackupSettingsWidget extends ConsumerWidget {
     return Column(
       children: [
         _SettingsTile(
-          title: 'Export Backup',
-          subtitle: 'Save settings, books and instances to a JSON file',
+          title: AppLocalizations.of(context).exportBackupTitle,
+          subtitle: AppLocalizations.of(context).exportBackupSubtitle,
           icon: Icons.file_upload_outlined,
           onTap: () => _export(context),
         ),
         _SettingsTile(
-          title: 'Import Backup',
-          subtitle: 'Restore from a backup file (replaces current data)',
+          title: AppLocalizations.of(context).importBackupTitle,
+          subtitle: AppLocalizations.of(context).importBackupSubtitle,
           icon: Icons.file_download_outlined,
           onTap: () => _import(context, ref),
         ),
@@ -850,6 +850,7 @@ class _LanguageSelectorWidget extends ConsumerWidget {
       'de': 'Deutsch',
       'fr': 'Français',
       'es': 'Español',
+      'zh': '中文',
     };
 
     return DropdownButtonFormField<Locale?>(

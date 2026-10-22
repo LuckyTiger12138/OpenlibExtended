@@ -48,7 +48,9 @@ Future<void> launchEpubViewer({
         }
       } catch (e) {
         if (context.mounted) {
-          showSnackBar(context: context, message: "Unable to open epub!");
+          showSnackBar(
+              context: context,
+              message: AppLocalizations.of(context).unableToOpenEpub);
         }
       }
     }
@@ -57,7 +59,8 @@ Future<void> launchEpubViewer({
     if (context.mounted) {
       showSnackBar(
           context: context,
-          message: "File not found. The download may have failed.");
+          message:
+              AppLocalizations.of(context).fileNotFoundDownloadFailed);
     }
   }
 }
@@ -480,8 +483,9 @@ class _EpubViewerState extends ConsumerState<EpubViewer> {
                     color: Theme.of(context).colorScheme.secondary,
                   ),
                 ),
-                error: (err, stack) =>
-                    Center(child: Text("Error loading book: $err")),
+                error: (err, stack) => Center(
+                    child: Text(AppLocalizations.of(context)
+                        .errorLoadingBook(err.toString()))),
               ),
             ),
           ),

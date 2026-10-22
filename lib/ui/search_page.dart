@@ -125,7 +125,9 @@ class _SearchPageState extends ConsumerState<SearchPage> {
         return ResultPage(searchQuery: searchQuery);
       }));
     } else {
-      showSnackBar(context: context, message: 'Search field is empty');
+      showSnackBar(
+          context: context,
+          message: AppLocalizations.of(context).searchFieldEmpty);
     }
   }
 
@@ -196,7 +198,7 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                   filled: true,
                   hintStyle: const TextStyle(
                       color: Colors.grey, fontWeight: FontWeight.bold),
-                  hintText: "Search",
+                  hintText: AppLocalizations.of(context).searchHint,
                   // Remove explicit fillColor to use the theme default (Dark Grey in Dark Mode)
                 ),
                 onSubmitted: (String value) => onSubmit(context),
@@ -265,7 +267,7 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                 width: 250,
                 child: DropdownButtonFormField(
                   decoration: InputDecoration(
-                    labelText: 'Type',
+                    labelText: AppLocalizations.of(context).filterType,
                     labelStyle: TextStyle(
                       fontSize: 11,
                       fontWeight: FontWeight.bold,
@@ -290,7 +292,8 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                     return DropdownMenuItem<String>(
                       value: value,
                       child: Text(
-                        value,
+                        filterDisplayLabel(
+                            AppLocalizations.of(context), value),
                         style: const TextStyle(
                             fontSize: 12, fontWeight: FontWeight.bold),
                       ),
@@ -310,7 +313,7 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                 width: 210,
                 child: DropdownButtonFormField(
                   decoration: InputDecoration(
-                    labelText: 'Sort by',
+                    labelText: AppLocalizations.of(context).filterSortBy,
                     labelStyle: TextStyle(
                       fontSize: 11,
                       fontWeight: FontWeight.bold,
@@ -334,7 +337,8 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                     return DropdownMenuItem<String>(
                       value: value,
                       child: Text(
-                        value,
+                        filterDisplayLabel(
+                            AppLocalizations.of(context), value),
                         style: const TextStyle(
                             fontSize: 12, fontWeight: FontWeight.bold),
                       ),
@@ -354,7 +358,7 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                 width: 165,
                 child: DropdownButtonFormField(
                   decoration: InputDecoration(
-                    labelText: 'File type',
+                    labelText: AppLocalizations.of(context).filterFileType,
                     labelStyle: TextStyle(
                       fontSize: 11,
                       fontWeight: FontWeight.bold,
@@ -376,7 +380,8 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                     return DropdownMenuItem<String>(
                       value: value,
                       child: Text(
-                        value,
+                        filterDisplayLabel(
+                            AppLocalizations.of(context), value),
                         style: const TextStyle(
                             fontSize: 12, fontWeight: FontWeight.bold),
                       ),
@@ -398,7 +403,7 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                 width: 200,
                 child: DropdownButtonFormField(
                   decoration: InputDecoration(
-                    labelText: 'Language',
+                    labelText: AppLocalizations.of(context).filterLanguage,
                     labelStyle: TextStyle(
                       fontSize: 11,
                       fontWeight: FontWeight.bold,
@@ -422,7 +427,8 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                     return DropdownMenuItem<String>(
                       value: value,
                       child: Text(
-                        value,
+                        filterDisplayLabel(
+                            AppLocalizations.of(context), value),
                         style: const TextStyle(
                             fontSize: 12, fontWeight: FontWeight.bold),
                       ),
@@ -444,7 +450,7 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                 width: 180,
                 child: DropdownButtonFormField(
                   decoration: InputDecoration(
-                    labelText: 'Year Published',
+                    labelText: AppLocalizations.of(context).filterYearPublished,
                     labelStyle: TextStyle(
                       fontSize: 11,
                       fontWeight: FontWeight.bold,
@@ -467,7 +473,8 @@ class _SearchPageState extends ConsumerState<SearchPage> {
                     return DropdownMenuItem<String>(
                       value: value,
                       child: Text(
-                        value,
+                        filterDisplayLabel(
+                            AppLocalizations.of(context), value),
                         style: const TextStyle(
                             fontSize: 12, fontWeight: FontWeight.bold),
                       ),
@@ -618,4 +625,58 @@ class _AdvancedSearchPanelState extends ConsumerState<_AdvancedSearchPanel> {
       ),
     );
   }
+}
+
+/// Display label for a stored filter value. Stored preference values stay
+/// in English so saved filters keep working across languages; only what
+/// the user sees is localized.
+String filterDisplayLabel(AppLocalizations l10n, String value) {
+  final labels = <String, String>{
+    'All': l10n.optionAll,
+    'Any Books': l10n.optionAnyBooks,
+    'Unknown Books': l10n.optionUnknownBooks,
+    'Fiction Books': l10n.optionFictionBooks,
+    'Non-fiction Books': l10n.optionNonfictionBooks,
+    'Comic Books': l10n.optionComicBooks,
+    'Magazine': l10n.optionMagazine,
+    'Standards Document': l10n.optionStandardsDocument,
+    'Journal Article': l10n.optionJournalArticle,
+    'Most Relevant': l10n.optionMostRelevant,
+    'Newest': l10n.optionNewest,
+    'Oldest': l10n.optionOldest,
+    'Largest': l10n.optionLargest,
+    'Smallest': l10n.optionSmallest,
+    'English': l10n.langEnglish,
+    'Spanish': l10n.langSpanish,
+    'French': l10n.langFrench,
+    'German': l10n.langGerman,
+    'Italian': l10n.langItalian,
+    'Portuguese': l10n.langPortuguese,
+    'Russian': l10n.langRussian,
+    'Chinese': l10n.langChinese,
+    'Japanese': l10n.langJapanese,
+    'Korean': l10n.langKorean,
+    'Arabic': l10n.langArabic,
+    'Hindi': l10n.langHindi,
+    'Malayalam': l10n.langMalayalam,
+    'Dutch': l10n.langDutch,
+    'Polish': l10n.langPolish,
+    'Turkish': l10n.langTurkish,
+    'Swedish': l10n.langSwedish,
+    'Indonesian': l10n.langIndonesian,
+    'Vietnamese': l10n.langVietnamese,
+    'Czech': l10n.langCzech,
+    'Greek': l10n.langGreek,
+    'Romanian': l10n.langRomanian,
+    'Hungarian': l10n.langHungarian,
+    'Ukrainian': l10n.langUkrainian,
+    'Hebrew': l10n.langHebrew,
+    'Thai': l10n.langThai,
+    'Persian': l10n.langPersian,
+    'Bengali': l10n.langBengali,
+    'Finnish': l10n.langFinnish,
+    'Norwegian': l10n.langNorwegian,
+    'Danish': l10n.langDanish,
+  };
+  return labels[value] ?? value;
 }

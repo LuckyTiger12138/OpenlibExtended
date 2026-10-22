@@ -245,6 +245,10 @@ class _SmoothScrollBehavior extends MaterialScrollBehavior {
 /// widget) can push the visible solver page from anywhere.
 final GlobalKey<NavigatorState> _navigatorKey = GlobalKey<NavigatorState>();
 
+/// Public accessor for services (e.g. download notifications) that need
+/// the localized strings without a BuildContext of their own.
+GlobalKey<NavigatorState> get appNavigatorKey => _navigatorKey;
+
 class MyApp extends ConsumerWidget {
   final bool onboardingCompleted;
 

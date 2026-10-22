@@ -150,9 +150,10 @@ class BookInfoWidget extends ConsumerWidget {
                                     mode: LaunchMode.externalApplication);
                               } else if (context.mounted) {
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                      content:
-                                          Text('Could not open the link.')),
+                                  SnackBar(
+                                      content: Text(AppLocalizations.of(
+                                              context)
+                                          .couldNotOpenLink)),
                                 );
                               }
                             },

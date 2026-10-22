@@ -9,6 +9,7 @@ import 'app_localizations_de.dart';
 import 'app_localizations_en.dart';
 import 'app_localizations_es.dart';
 import 'app_localizations_fr.dart';
+import 'app_localizations_zh.dart';
 
 // ignore_for_file: type=lint
 
@@ -99,7 +100,8 @@ abstract class AppLocalizations {
     Locale('de'),
     Locale('en'),
     Locale('es'),
-    Locale('fr')
+    Locale('fr'),
+    Locale('zh')
   ];
 
   /// Application name shown in the app bar and about page
@@ -1403,6 +1405,1202 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Missing LibGen covers are fetched from the book\'s detail page.'**
   String get whatsNewFeatureCovers;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Search field is empty'**
+  String get searchFieldEmpty;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Search'**
+  String get searchHint;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Type'**
+  String get filterType;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Sort by'**
+  String get filterSortBy;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'File type'**
+  String get filterFileType;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get filterLanguage;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Year Published'**
+  String get filterYearPublished;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get optionAll;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Any Books'**
+  String get optionAnyBooks;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Unknown Books'**
+  String get optionUnknownBooks;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Fiction Books'**
+  String get optionFictionBooks;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Non-fiction Books'**
+  String get optionNonfictionBooks;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Comic Books'**
+  String get optionComicBooks;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Magazine'**
+  String get optionMagazine;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Standards Document'**
+  String get optionStandardsDocument;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Journal Article'**
+  String get optionJournalArticle;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Most Relevant'**
+  String get optionMostRelevant;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Newest'**
+  String get optionNewest;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Oldest'**
+  String get optionOldest;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Largest'**
+  String get optionLargest;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Smallest'**
+  String get optionSmallest;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get langEnglish;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Spanish'**
+  String get langSpanish;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'French'**
+  String get langFrench;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'German'**
+  String get langGerman;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Italian'**
+  String get langItalian;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Portuguese'**
+  String get langPortuguese;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Russian'**
+  String get langRussian;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Chinese'**
+  String get langChinese;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Japanese'**
+  String get langJapanese;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Korean'**
+  String get langKorean;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Arabic'**
+  String get langArabic;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Hindi'**
+  String get langHindi;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Malayalam'**
+  String get langMalayalam;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Dutch'**
+  String get langDutch;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Polish'**
+  String get langPolish;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Turkish'**
+  String get langTurkish;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Swedish'**
+  String get langSwedish;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Indonesian'**
+  String get langIndonesian;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Vietnamese'**
+  String get langVietnamese;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Czech'**
+  String get langCzech;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Greek'**
+  String get langGreek;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Romanian'**
+  String get langRomanian;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Hungarian'**
+  String get langHungarian;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Ukrainian'**
+  String get langUkrainian;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Hebrew'**
+  String get langHebrew;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Thai'**
+  String get langThai;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Persian'**
+  String get langPersian;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Bengali'**
+  String get langBengali;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Finnish'**
+  String get langFinnish;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Norwegian'**
+  String get langNorwegian;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Danish'**
+  String get langDanish;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Classics'**
+  String get genreClassics;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Timeless literary works often revered for their artistic merit and cultural significance.'**
+  String get genreClassicsDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Romance'**
+  String get genreRomance;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Stories focused on romantic relationships, exploring love, passion, and emotional connections.'**
+  String get genreRomanceDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Fiction'**
+  String get genreFiction;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Narrative literature created from the imagination, not based on real events.'**
+  String get genreFictionDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Young Adult'**
+  String get genreYoungAdult;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Books targeted at teenage readers, addressing themes relevant to adolescence.'**
+  String get genreYoungAdultDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Fantasy'**
+  String get genreFantasy;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'A genre featuring magical elements, mythical creatures, and fantastical worlds.'**
+  String get genreFantasyDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Science Fiction'**
+  String get genreScienceFiction;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Literature that explores futuristic concepts, advanced technology, and space exploration.'**
+  String get genreScienceFictionDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Nonfiction'**
+  String get genreNonfiction;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Works based on factual information, including essays, biographies, and documentaries.'**
+  String get genreNonfictionDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Children'**
+  String get genreChildren;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Books aimed at young readers, often with illustrations and simple narratives.'**
+  String get genreChildrenDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'History'**
+  String get genreHistory;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Literature that examines past events, cultures, and significant historical figures.'**
+  String get genreHistoryDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Mystery'**
+  String get genreMystery;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Stories centered around suspenseful plots, often involving crime or puzzles to solve.'**
+  String get genreMysteryDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Covers'**
+  String get genreCovers;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Refers to the artwork and design that visually represents a book, influencing reader interest.'**
+  String get genreCoversDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Horror'**
+  String get genreHorror;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'A genre designed to evoke fear, dread, or terror in the reader through suspenseful storytelling.'**
+  String get genreHorrorDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Historical Fiction'**
+  String get genreHistoricalFiction;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Novels set in a specific historical period, blending factual events with fictional characters.'**
+  String get genreHistoricalFictionDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Best'**
+  String get genreBest;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Often refers to critically acclaimed or popular books, usually categorized by rankings or awards.'**
+  String get genreBestDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Titles'**
+  String get genreTitles;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Refers to the names of books, which often reflect their themes or subject matter.'**
+  String get genreTitlesDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Middle Grade'**
+  String get genreMiddleGrade;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Books intended for readers aged 8-12, featuring age-appropriate themes and characters.'**
+  String get genreMiddleGradeDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Paranormal'**
+  String get genreParanormal;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Stories that incorporate supernatural elements, including ghosts, vampires, and otherworldly beings.'**
+  String get genreParanormalDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Love'**
+  String get genreLove;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'A theme exploring the complexities and nuances of love in various forms and relationships.'**
+  String get genreLoveDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Queer'**
+  String get genreQueer;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Literature that represents diverse sexual orientations and gender identities within the LGBTQ+ spectrum.'**
+  String get genreQueerDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Nonfiction'**
+  String get genreNonfictionAdult;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Works based on factual information, including essays, biographies, and documentaries.'**
+  String get genreNonfictionAdultDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Historical Romance'**
+  String get genreHistoricalRomance;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Novels combining romantic plots set against a historical backdrop.'**
+  String get genreHistoricalRomanceDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Contemporary'**
+  String get genreContemporary;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Works set in modern times, often addressing current social issues and relatable characters.'**
+  String get genreContemporaryDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Thriller'**
+  String get genreThriller;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'A suspenseful genre focused on excitement, tension, and unexpected twists.'**
+  String get genreThrillerDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Women'**
+  String get genreWomen;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Literature that explores women\'s experiences, perspectives, and empowerment.'**
+  String get genreWomenDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Biography'**
+  String get genreBiography;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Nonfiction works detailing the life story of an individual, highlighting their achievements and challenges.'**
+  String get genreBiographyDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'LGBTQ'**
+  String get genreLgbtq;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Inclusive literature representing the experiences of the lesbian, gay, bisexual, transgender, and queer community.'**
+  String get genreLgbtqDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Series'**
+  String get genreSeries;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'A collection of related books that follow a common storyline or set of characters.'**
+  String get genreSeriesDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Title Challenge'**
+  String get genreTitleChallenge;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Refers to prompts or contests encouraging creative thinking about book titles.'**
+  String get genreTitleChallengeDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Mirrors'**
+  String get mirrorsTitle;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Could not reach open-slum.org - no mirror list available'**
+  String get openSlumUnreachable;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Mirror list is up to date'**
+  String get mirrorListUpToDate;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Mirror list updated: {count} change(s)'**
+  String mirrorListUpdated(String count);
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Refresh failed: {error}'**
+  String mirrorRefreshFailed(String error);
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Mirror addresses and their status come from open-slum.org and refresh automatically. A mirror reported DOWN is never contacted.'**
+  String get mirrorsIntro;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Automatic mirror order'**
+  String get mirrorAutoOrder;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Easiest protection first, then fastest. Recommended.'**
+  String get mirrorAutoOrderOn;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Manual: use the arrows to set your own order.'**
+  String get mirrorAutoOrderOff;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Fast, challenge-free downloads when a mirror is up'**
+  String get serviceLibgenDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'DiamWall mirrors solve headlessly'**
+  String get serviceZlibDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Cloudflare-gated search, open book pages'**
+  String get serviceWelibDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Reading, details and downloads'**
+  String get serviceAnnasDesc;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'No mirrors reported'**
+  String get noMirrorsReported;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'open-slum.org has no entry (yet) or could not be reached.'**
+  String get noMirrorsReportedHint;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Could not load mirrors'**
+  String get couldNotLoadMirrors;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'reported down - never contacted'**
+  String get mirrorReportedDown;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Move up'**
+  String get moveUp;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Move down'**
+  String get moveDown;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Export Backup'**
+  String get exportBackupTitle;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Save settings, books and instances to a JSON file'**
+  String get exportBackupSubtitle;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Import Backup'**
+  String get importBackupTitle;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Restore from a backup file (replaces current data)'**
+  String get importBackupSubtitle;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Sync library with storage folder'**
+  String get syncLibraryTooltip;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Reader Controls'**
+  String get readerControls;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Arrow Keys'**
+  String get helpArrowKeys;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Tap Sides'**
+  String get helpTapSides;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Use Left/Right arrows to turn pages'**
+  String get helpTurnPagesKeys;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Tap left/right edges to turn pages'**
+  String get helpTurnPagesTap;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Zoom'**
+  String get helpZoom;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Use provided controls'**
+  String get helpZoomDesktop;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Pinch to zoom (PDF)'**
+  String get helpZoomPinch;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Menu'**
+  String get helpMenu;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Table of Contents via sidebar'**
+  String get helpMenuDesktop;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Tap center or swipe for menu'**
+  String get helpMenuTap;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Unable to open epub!'**
+  String get unableToOpenEpub;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'File not found. The download may have failed.'**
+  String get fileNotFoundDownloadFailed;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Error loading book: {error}'**
+  String errorLoadingBook(String error);
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Could not open the link.'**
+  String get couldNotOpenLink;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Permission Required'**
+  String get permissionRequired;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'To install app updates, OpenlibExtended needs permission to install packages.\n\nThis allows the app to automatically install new versions with bug fixes and new features.\n\nYou will be taken to Settings to enable this permission.'**
+  String get installPermissionBody;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Open Settings'**
+  String get openSettings;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Downloaded file not found'**
+  String get downloadedFileNotFound;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Downloaded file appears to be corrupted (only {size})'**
+  String downloadedFileCorrupted(String size);
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Permission to install apps was denied. You can still install manually.'**
+  String get installPermissionDeniedManual;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Debug Build Detected: Update may fail with \'App not installed\' due to signature mismatch. Uninstall this app first.'**
+  String get debugBuildWarning;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Opening installer... If nothing happens, the install failed.'**
+  String get openingInstallerHint;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Manual Install'**
+  String get manualInstall;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Open File'**
+  String get methodOpenFile;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'May have failed silently'**
+  String get mayHaveFailedSilently;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to install update: {error}'**
+  String failedInstallUpdate(String error);
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Installation Issue'**
+  String get installationIssue;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'The automatic installer couldn\'t open the APK. This can happen on some Android versions.\n\nYou can install manually using one of these options:'**
+  String get installFallbackBody;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'File: {fileName}'**
+  String fileLabel(String fileName);
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Installation Failed'**
+  String get installationFailed;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Methods tried:'**
+  String get methodsTried;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Errors encountered:'**
+  String get errorsEncountered;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Method {number}'**
+  String methodN(String number);
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Installation Error'**
+  String get installationError;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'OK'**
+  String get ok;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Try Manual Install'**
+  String get tryManualInstall;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Download via Browser'**
+  String get downloadViaBrowser;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Update Available'**
+  String get updateAvailable;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Version {version} is available!'**
+  String versionIsAvailable(String version);
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Pre-release'**
+  String get preRelease;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'What\'s new:'**
+  String get whatsNewLabel;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Later'**
+  String get later;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Download & Install'**
+  String get downloadAndInstall;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Download from GitHub'**
+  String get downloadFromGithub;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'View on GitHub'**
+  String get viewOnGithub;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Download Complete'**
+  String get downloadComplete;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Download Failed'**
+  String get downloadFailed;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Downloading Update'**
+  String get downloadingUpdate;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Opening installer...'**
+  String get openingInstallerShort;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Connecting...'**
+  String get connecting;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Already downloading: {title}'**
+  String notifAlreadyDownloading(String title);
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Queued: {title}'**
+  String notifQueued(String title);
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Paused'**
+  String get notifPaused;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Manual verification needed'**
+  String get notifManualVerification;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Finding available mirror...'**
+  String get notifFindingMirror;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Downloading from {source}...'**
+  String notifDownloadingFrom(String source);
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Downloading'**
+  String get notifDownloading;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Downloading... {percent}%'**
+  String notifDownloadingProgress(String percent);
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Download'**
+  String get notifDownload;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Failed: {message}'**
+  String notifFailed(String message);
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Verifying file...'**
+  String get notifVerifyingFile;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Download completed!'**
+  String get notifDownloadCompleted;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Download completed (checksum failed)'**
+  String get notifDownloadCompletedChecksumFailed;
+
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'APK Sideload'**
+  String get methodApkSideload;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Package Installer'**
+  String get methodPackageInstaller;
+
+  /// UI string extracted for full Chinese localization
+  ///
+  /// In en, this message translates to:
+  /// **'Version {version}'**
+  String versionShort(String version);
+
 }
 
 class _AppLocalizationsDelegate
@@ -1416,7 +2614,7 @@ class _AppLocalizationsDelegate
 
   @override
   bool isSupported(Locale locale) =>
-      <String>['de', 'en', 'es', 'fr'].contains(locale.languageCode);
+      <String>['de', 'en', 'es', 'fr', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -1433,6 +2631,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsEs();
     case 'fr':
       return AppLocalizationsFr();
+    case 'zh':
+      return AppLocalizationsZh();
   }
 
   throw FlutterError(

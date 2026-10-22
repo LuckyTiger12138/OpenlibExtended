@@ -21,6 +21,7 @@ import 'package:url_launcher/url_launcher.dart';
 // Project imports:
 import 'package:openlib/services/database.dart';
 import 'package:openlib/services/logger.dart';
+import 'package:openlib/l10n/app_localizations.dart';
 
 // Release information from GitHub
 class ReleaseInfo {
@@ -371,24 +372,22 @@ class UpdateCheckerService {
               Icon(Icons.security,
                   color: Theme.of(dialogContext).colorScheme.secondary),
               const SizedBox(width: 10),
-              const Expanded(
+              Expanded(
                 child: Text(
-                  "Permission Required",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  AppLocalizations.of(dialogContext).permissionRequired,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
               ),
             ],
           ),
-          content: const Text(
-            "To install app updates, OpenlibExtended needs permission to install packages.\n\n"
-            "This allows the app to automatically install new versions with bug fixes and new features.\n\n"
-            "You will be taken to Settings to enable this permission.",
+          content: Text(
+            AppLocalizations.of(dialogContext).installPermissionBody,
           ),
           actions: [
             TextButton(
               onPressed: () => Navigator.of(dialogContext).pop(false),
               child: Text(
-                "Cancel",
+                AppLocalizations.of(dialogContext).cancel,
                 style: TextStyle(
                   color: Theme.of(dialogContext)
                       .colorScheme
@@ -400,7 +399,7 @@ class UpdateCheckerService {
             TextButton(
               onPressed: () => Navigator.of(dialogContext).pop(true),
               child: Text(
-                "Open Settings",
+                AppLocalizations.of(dialogContext).openSettings,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Theme.of(dialogContext).colorScheme.secondary,
@@ -566,7 +565,10 @@ class UpdateCheckerService {
     if (!await file.exists()) {
       _logger.error("Update file does not exist", tag: "UpdateChecker");
       if (context.mounted) {
-        _showInstallErrorDialog(context, filePath, "Downloaded file not found",
+        _showInstallErrorDialog(
+            context,
+            filePath,
+            AppLocalizations.of(context).downloadedFileNotFound,
             release: release);
       }
       return false;
@@ -577,8 +579,10 @@ class UpdateCheckerService {
       _logger.error("Update file is too small, likely corrupted",
           tag: "UpdateChecker", metadata: {"size": fileSize});
       if (context.mounted) {
-        _showInstallErrorDialog(context, filePath,
-            "Downloaded file appears to be corrupted (only ${_formatBytes(fileSize)})",
+        _showInstallErrorDialog(
+            context,
+            filePath,
+            AppLocalizations.of(context).downloadedFileCorrupted(_formatBytes(fileSize)),
             release: release);
       }
       return false;
@@ -623,8 +627,10 @@ class UpdateCheckerService {
     if (!hasPermission) {
       _logger.warning("Install permission denied", tag: "UpdateChecker");
       if (context.mounted) {
-        _showInstallErrorDialog(context, filePath,
-            "Permission to install apps was denied. You can still install manually.",
+        _showInstallErrorDialog(
+            context,
+            filePath,
+            AppLocalizations.of(context).installPermissionDeniedManual,
             release: release);
       }
       return false;
@@ -635,7 +641,7 @@ class UpdateCheckerService {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text(
-            "Debug Build Detected: Update may fail with 'App not installed' due to signature mismatch. Uninstall this app first.",
+            AppLocalizations.of(context).debugBuildWarning,
           ),
           backgroundColor: Colors.orange,
           duration: Duration(seconds: 10),
@@ -644,7 +650,7 @@ class UpdateCheckerService {
     }
 
     // Method 1: Try open_file (Most standard method)
-    attemptedMethods.add("Open File");
+    attemptedMethods.add(AppLocalizations.of(context).methodOpenFile);
     try {
       _logger.info("Attempting installation with open_file",
           tag: "UpdateChecker");
@@ -655,11 +661,11 @@ class UpdateCheckerService {
         if (context.mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: const Text(
-                  "Opening installer... If nothing happens, the install failed."),
+              content: Text(
+                  AppLocalizations.of(context).openingInstallerHint),
               duration: const Duration(seconds: 5),
               action: SnackBarAction(
-                label: "Manual Install",
+                label: AppLocalizations.of(context).manualInstall,
                 onPressed: () {
                   if (context.mounted) {
                     _showInstallFallbackDialog(
@@ -689,7 +695,7 @@ class UpdateCheckerService {
     }
 
     // Method 2: Try apk_sideload
-    attemptedMethods.add("APK Sideload");
+    attemptedMethods.add(AppLocalizations.of(context).methodApkSideload);
     try {
       _logger.info("Attempting installation with apk_sideload",
           tag: "UpdateChecker");
@@ -700,15 +706,17 @@ class UpdateCheckerService {
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: const Text(
-                "Opening installer... If nothing happens, the install failed."),
+            content: Text(
+                AppLocalizations.of(context).openingInstallerHint),
             duration: const Duration(seconds: 5),
             action: SnackBarAction(
-              label: "Manual Install",
+              label: AppLocalizations.of(context).manualInstall,
               onPressed: () {
                 if (context.mounted) {
                   _showInstallFallbackDialog(context, filePath,
-                      attemptedMethods, ["May have failed silently"], release);
+                      attemptedMethods,
+                      [AppLocalizations.of(context).mayHaveFailedSilently],
+                      release);
                 }
               },
             ),
@@ -729,7 +737,7 @@ class UpdateCheckerService {
     }
 
     // Method 3: Try android_package_installer
-    attemptedMethods.add("Package Installer");
+    attemptedMethods.add(AppLocalizations.of(context).methodPackageInstaller);
     try {
       _logger.info("Attempting installation with android_package_installer",
           tag: "UpdateChecker");
@@ -745,18 +753,18 @@ class UpdateCheckerService {
           if (context.mounted) {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: const Text(
-                    "Opening installer... If nothing happens, the install failed."),
+                content: Text(
+                    AppLocalizations.of(context).openingInstallerHint),
                 duration: const Duration(seconds: 5),
                 action: SnackBarAction(
-                  label: "Manual Install",
+                  label: AppLocalizations.of(context).manualInstall,
                   onPressed: () {
                     if (context.mounted) {
                       _showInstallFallbackDialog(
                           context,
                           filePath,
                           attemptedMethods,
-                          ["May have failed silently"],
+                          [AppLocalizations.of(context).mayHaveFailedSilently],
                           release);
                     }
                   },
@@ -807,14 +815,17 @@ class UpdateCheckerService {
       context: context,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Row(
+          title: Row(
             children: [
-              Icon(Icons.warning_amber_rounded, color: Colors.orange, size: 28),
-              SizedBox(width: 10),
+              const Icon(
+                  Icons.warning_amber_rounded,
+                  color: Colors.orange,
+                  size: 28),
+              const SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  "Installation Issue",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  AppLocalizations.of(dialogContext).installationIssue,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
               ),
             ],
@@ -824,13 +835,12 @@ class UpdateCheckerService {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "The automatic installer couldn't open the APK. This can happen on some Android versions.\n\n"
-                  "You can install manually using one of these options:",
+                Text(
+                  AppLocalizations.of(dialogContext).installFallbackBody,
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  "File: $fileName",
+                  AppLocalizations.of(dialogContext).fileLabel(fileName),
                   style: TextStyle(
                     fontSize: 12,
                     color: Theme.of(dialogContext)
@@ -862,7 +872,7 @@ class UpdateCheckerService {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Installation Failed",
+                          AppLocalizations.of(dialogContext).installationFailed,
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -872,7 +882,7 @@ class UpdateCheckerService {
                         const SizedBox(height: 8),
                         if (hasMethods) ...[
                           Text(
-                            "Methods tried:",
+                            AppLocalizations.of(dialogContext).methodsTried,
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.bold,
@@ -895,7 +905,7 @@ class UpdateCheckerService {
                         if (hasErrors) ...[
                           const SizedBox(height: 8),
                           Text(
-                            "Errors encountered:",
+                            AppLocalizations.of(dialogContext).errorsEncountered,
                             style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.bold,
@@ -909,7 +919,7 @@ class UpdateCheckerService {
                             final methodName =
                                 hasMethods && index < attemptedMethods.length
                                     ? attemptedMethods[index]
-                                    : "Method ${index + 1}";
+                                    : AppLocalizations.of(dialogContext).methodN((index + 1).toString());
                             return Padding(
                               padding: const EdgeInsets.only(bottom: 4),
                               child: SelectableText(
@@ -935,7 +945,7 @@ class UpdateCheckerService {
             TextButton(
               onPressed: () => Navigator.of(dialogContext).pop(),
               child: Text(
-                "Cancel",
+                AppLocalizations.of(dialogContext).cancel,
                 style: TextStyle(
                   color: Theme.of(dialogContext)
                       .colorScheme
@@ -956,7 +966,7 @@ class UpdateCheckerService {
                   }
                 },
                 child: Text(
-                  "Download via Browser",
+                  AppLocalizations.of(dialogContext).downloadViaBrowser,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Theme.of(dialogContext).colorScheme.secondary,
@@ -977,14 +987,14 @@ class UpdateCheckerService {
       context: context,
       builder: (BuildContext dialogContext) {
         return AlertDialog(
-          title: const Row(
+          title: Row(
             children: [
-              Icon(Icons.error_outline, color: Colors.red, size: 28),
-              SizedBox(width: 10),
+              const Icon(Icons.error_outline, color: Colors.red, size: 28),
+              const SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  "Installation Error",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  AppLocalizations.of(dialogContext).installationError,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
               ),
             ],
@@ -994,7 +1004,7 @@ class UpdateCheckerService {
             TextButton(
               onPressed: () => Navigator.of(dialogContext).pop(),
               child: Text(
-                "OK",
+                AppLocalizations.of(dialogContext).ok,
                 style: TextStyle(
                   color: Theme.of(dialogContext).colorScheme.secondary,
                 ),
@@ -1008,7 +1018,7 @@ class UpdateCheckerService {
                       context, filePath, null, null, release);
                 },
                 child: Text(
-                  "Try Manual Install",
+                  AppLocalizations.of(dialogContext).tryManualInstall,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Theme.of(dialogContext).colorScheme.secondary,
@@ -1061,7 +1071,8 @@ class UpdateCheckerService {
         if (context.mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: Text("Failed to install update: $e"),
+              content: Text(
+                AppLocalizations.of(context).failedInstallUpdate(e.toString())),
               backgroundColor: Colors.red,
             ),
           );
@@ -1100,7 +1111,7 @@ class UpdateCheckerService {
                   color: Theme.of(dialogContext).colorScheme.secondary),
               const SizedBox(width: 10),
               Text(
-                "Update Available",
+                AppLocalizations.of(dialogContext).updateAvailable,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Theme.of(dialogContext).colorScheme.secondary,
@@ -1114,7 +1125,7 @@ class UpdateCheckerService {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  "Version ${release.version} is available!",
+                  AppLocalizations.of(dialogContext).versionIsAvailable(release.version),
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
@@ -1130,8 +1141,8 @@ class UpdateCheckerService {
                       color: Colors.orange.withValues(alpha: 0.2),
                       borderRadius: BorderRadius.circular(4),
                     ),
-                    child: const Text(
-                      "Pre-release",
+                    child: Text(
+                      AppLocalizations.of(dialogContext).preRelease,
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.bold,
@@ -1142,7 +1153,7 @@ class UpdateCheckerService {
                 const SizedBox(height: 12),
                 if (release.body.isNotEmpty) ...[
                   Text(
-                    "What's new:",
+                    AppLocalizations.of(dialogContext).whatsNewLabel,
                     style: TextStyle(
                       fontSize: 13,
                       fontWeight: FontWeight.bold,
@@ -1173,7 +1184,7 @@ class UpdateCheckerService {
             TextButton(
               onPressed: () => Navigator.of(dialogContext).pop(),
               child: Text(
-                "Later",
+                AppLocalizations.of(dialogContext).later,
                 style: TextStyle(
                   color: Theme.of(dialogContext)
                       .colorScheme
@@ -1192,7 +1203,7 @@ class UpdateCheckerService {
                   }
                 },
                 child: Text(
-                  "Download & Install",
+                  AppLocalizations.of(context).downloadAndInstall,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Theme.of(dialogContext).colorScheme.secondary,
@@ -1216,8 +1227,8 @@ class UpdateCheckerService {
                 },
                 child: Text(
                   downloadUrl != null
-                      ? "Download & Install"
-                      : "Download from GitHub",
+                      ? AppLocalizations.of(context).downloadAndInstall
+                      : AppLocalizations.of(context).downloadFromGithub,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Theme.of(dialogContext).colorScheme.secondary,
@@ -1235,7 +1246,7 @@ class UpdateCheckerService {
                   }
                 },
                 child: Text(
-                  "View on GitHub",
+                  AppLocalizations.of(context).viewOnGithub,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Theme.of(context).colorScheme.secondary,
@@ -1373,10 +1384,10 @@ class _UpdateDownloadDialogState extends State<_UpdateDownloadDialog> {
           Expanded(
             child: Text(
               _downloadComplete
-                  ? "Download Complete"
+                  ? AppLocalizations.of(context).downloadComplete
                   : _errorMessage != null
-                      ? "Download Failed"
-                      : "Downloading Update",
+                      ? AppLocalizations.of(context).downloadFailed
+                      : AppLocalizations.of(context).downloadingUpdate,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: _downloadComplete
@@ -1416,7 +1427,7 @@ class _UpdateDownloadDialogState extends State<_UpdateDownloadDialog> {
                 Icon(Icons.check, color: Colors.green, size: 20),
                 SizedBox(width: 8),
                 Text(
-                  "Opening installer...",
+                  AppLocalizations.of(context).openingInstallerShort,
                   style: TextStyle(
                     color: Colors.green,
                     fontSize: 13,
@@ -1449,7 +1460,7 @@ class _UpdateDownloadDialogState extends State<_UpdateDownloadDialog> {
                 Text(
                   _totalBytes > 0
                       ? "${_formatBytes(_downloadedBytes)} / ${_formatBytes(_totalBytes)}"
-                      : "Connecting...",
+                      : AppLocalizations.of(context).connecting,
                   style: TextStyle(
                     fontSize: 12,
                     color: Theme.of(context)
@@ -1468,7 +1479,7 @@ class _UpdateDownloadDialogState extends State<_UpdateDownloadDialog> {
           TextButton(
             onPressed: _cancelDownload,
             child: Text(
-              "Cancel",
+              AppLocalizations.of(context).cancel,
               style: TextStyle(
                 color: Theme.of(context)
                     .colorScheme
@@ -1481,7 +1492,7 @@ class _UpdateDownloadDialogState extends State<_UpdateDownloadDialog> {
           TextButton(
             onPressed: widget.onCancel,
             child: Text(
-              "Close",
+              AppLocalizations.of(context).close,
               style: TextStyle(
                 color: Theme.of(context)
                     .colorScheme
@@ -1503,7 +1514,7 @@ class _UpdateDownloadDialogState extends State<_UpdateDownloadDialog> {
               _startDownload();
             },
             child: Text(
-              "Retry",
+              AppLocalizations.of(context).retry,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Theme.of(context).colorScheme.secondary,

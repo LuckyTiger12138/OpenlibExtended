@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 // Project imports:
+import 'package:openlib/l10n/app_localizations.dart';
 import 'package:openlib/services/instance_manager.dart';
 import 'package:openlib/state/state.dart';
 import 'package:openlib/ui/components/page_title_widget.dart';
@@ -55,13 +56,6 @@ class _InstancesPageState extends ConsumerState<InstancesPage> {
     MirrorService.annasArchive: "Anna's Archive",
   };
 
-  static const _serviceSubtitles = {
-    MirrorService.libgen: 'Fast, challenge-free downloads when a mirror is up',
-    MirrorService.zlibrary: 'DiamWall mirrors solve headlessly',
-    MirrorService.welib: 'Cloudflare-gated search, open book pages',
-    MirrorService.annasArchive: 'Reading, details and downloads',
-  };
-
   Future<void> _refresh() async {
     if (_refreshing) return;
     setState(() => _refreshing = true);
@@ -76,22 +70,24 @@ class _InstancesPageState extends ConsumerState<InstancesPage> {
         // Nothing is known - saying "up to date" would claim the empty
         // list is SLUM's answer.
         messenger.showSnackBar(SnackBar(
-          content: const Text(
-              'Could not reach open-slum.org - no mirror list available'),
+          content:
+              Text(AppLocalizations.of(context).openSlumUnreachable),
           backgroundColor: Theme.of(context).colorScheme.error,
         ));
         return;
       }
       messenger.showSnackBar(SnackBar(
         content: Text(result.changes.isEmpty
-            ? 'Mirror list is up to date'
-            : 'Mirror list updated: ${result.changes.length} change(s)'),
+            ? AppLocalizations.of(context).mirrorListUpToDate
+            : AppLocalizations.of(context)
+                .mirrorListUpdated(result.changes.length.toString())),
         duration: const Duration(seconds: 2),
       ));
     } catch (e) {
       if (!mounted) return;
       messenger.showSnackBar(SnackBar(
-        content: Text('Refresh failed: $e'),
+        content: Text(
+            AppLocalizations.of(context).mirrorRefreshFailed(e.toString())),
         backgroundColor: Theme.of(context).colorScheme.error,
       ));
     } finally {
@@ -104,7 +100,8 @@ class _InstancesPageState extends ConsumerState<InstancesPage> {
     final autoMode = ref.watch(instanceAutoModeProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const TitleText('Mirrors')),
+      appBar: AppBar(
+          title: TitleText(AppLocalizations.of(context).mirrorsTitle)),
       body: RefreshIndicator(
         onRefresh: _refresh,
         child: ListView(
@@ -115,13 +112,11 @@ class _InstancesPageState extends ConsumerState<InstancesPage> {
               _sectionHeader(context, service),
               _serviceList(service, autoMode),
             ],
-            const Padding(
-              padding: EdgeInsets.fromLTRB(16, 8, 16, 24),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
               child: Text(
-                'Mirror addresses and their status come from open-slum.org '
-                'and refresh automatically. A mirror reported DOWN is never '
-                'contacted.',
-                style: TextStyle(fontSize: 12),
+                AppLocalizations.of(context).mirrorsIntro,
+                style: const TextStyle(fontSize: 12),
               ),
             ),
           ],
@@ -142,13 +137,27 @@ class _InstancesPageState extends ConsumerState<InstancesPage> {
             ref.invalidate(serviceInstancesProvider(service));
           }
         },
-        title: const Text('Automatic mirror order'),
+        title: Text(AppLocalizations.of(context).mirrorAutoOrder),
         subtitle: Text(autoMode
-            ? 'Easiest protection first, then fastest. Recommended.'
-            : 'Manual: use the arrows to set your own order.'),
+            ? AppLocalizations.of(context).mirrorAutoOrderOn
+            : AppLocalizations.of(context).mirrorAutoOrderOff),
         secondary: Icon(autoMode ? Icons.auto_awesome : Icons.touch_app),
       ),
     );
+  }
+
+  /// Localized per-service description line.
+  String _serviceSubtitle(AppLocalizations l10n, MirrorService service) {
+    switch (service) {
+      case MirrorService.libgen:
+        return l10n.serviceLibgenDesc;
+      case MirrorService.zlibrary:
+        return l10n.serviceZlibDesc;
+      case MirrorService.welib:
+        return l10n.serviceWelibDesc;
+      case MirrorService.annasArchive:
+        return l10n.serviceAnnasDesc;
+    }
   }
 
   Widget _sectionHeader(BuildContext context, MirrorService service) {
@@ -162,7 +171,7 @@ class _InstancesPageState extends ConsumerState<InstancesPage> {
             style: Theme.of(context).textTheme.titleMedium,
           ),
           Text(
-            _serviceSubtitles[service] ?? '',
+            _serviceSubtitle(AppLocalizations.of(context), service),
             style: Theme.of(context).textTheme.bodySmall,
           ),
         ],
@@ -179,9 +188,9 @@ class _InstancesPageState extends ConsumerState<InstancesPage> {
           return ListTile(
             dense: true,
             leading: const Icon(Icons.cloud_off),
-            title: const Text('No mirrors reported'),
-            subtitle: const Text(
-                'open-slum.org has no entry (yet) or could not be reached.'),
+            title: Text(AppLocalizations.of(context).noMirrorsReported),
+            subtitle: Text(
+                AppLocalizations.of(context).noMirrorsReportedHint),
             trailing: IconButton(
               icon: const Icon(Icons.refresh),
               onPressed: _refresh,
@@ -202,7 +211,7 @@ class _InstancesPageState extends ConsumerState<InstancesPage> {
       error: (error, _) => ListTile(
         dense: true,
         leading: const Icon(Icons.error_outline),
-        title: const Text('Could not load mirrors'),
+        title: Text(AppLocalizations.of(context).couldNotLoadMirrors),
         subtitle: Text('$error'),
       ),
     );
@@ -229,7 +238,8 @@ class _InstancesPageState extends ConsumerState<InstancesPage> {
             site.status.name.toUpperCase(),
             if (site.protection != Protection.none) site.protection.label,
             if (site.latencyMs != null) '${site.latencyMs}ms',
-            if (down) 'reported down - never contacted',
+            if (down)
+              AppLocalizations.of(context).mirrorReportedDown,
           ].join(' · '),
           style: const TextStyle(fontSize: 12),
         ),
@@ -240,7 +250,7 @@ class _InstancesPageState extends ConsumerState<InstancesPage> {
               IconButton(
                 icon: const Icon(Icons.keyboard_arrow_up),
                 iconSize: 20,
-                tooltip: 'Move up',
+                tooltip: AppLocalizations.of(context).moveUp,
                 onPressed: index == 0
                     ? null
                     : () async {
@@ -253,7 +263,7 @@ class _InstancesPageState extends ConsumerState<InstancesPage> {
               IconButton(
                 icon: const Icon(Icons.keyboard_arrow_down),
                 iconSize: 20,
-                tooltip: 'Move down',
+                tooltip: AppLocalizations.of(context).moveDown,
                 onPressed: index == total - 1
                     ? null
                     : () async {

@@ -37,7 +37,7 @@ class ReaderHelpOverlay extends StatelessWidget {
                 const Icon(Icons.menu_book, color: Colors.white, size: 60),
                 const SizedBox(height: 20),
                 Text(
-                  "Reader Controls",
+                  AppLocalizations.of(context).readerControls,
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -54,26 +54,28 @@ class ReaderHelpOverlay extends StatelessWidget {
                     _buildHelpItem(
                       context,
                       icon: isDesktop ? Icons.keyboard : Icons.touch_app,
-                      title: isDesktop ? "Arrow Keys" : "Tap Sides",
+                      title: isDesktop
+                          ? AppLocalizations.of(context).helpArrowKeys
+                          : AppLocalizations.of(context).helpTapSides,
                       subtitle: isDesktop
-                          ? "Use Left/Right arrows to turn pages"
-                          : "Tap left/right edges to turn pages",
+                          ? AppLocalizations.of(context).helpTurnPagesKeys
+                          : AppLocalizations.of(context).helpTurnPagesTap,
                     ),
                     _buildHelpItem(
                       context,
                       icon: Icons.zoom_in,
-                      title: "Zoom",
+                      title: AppLocalizations.of(context).helpZoom,
                       subtitle: isDesktop
-                          ? "Use provided controls"
-                          : "Pinch to zoom (PDF)",
+                          ? AppLocalizations.of(context).helpZoomDesktop
+                          : AppLocalizations.of(context).helpZoomPinch,
                     ),
                     _buildHelpItem(
                       context,
                       icon: Icons.list,
-                      title: "Menu",
+                      title: AppLocalizations.of(context).helpMenu,
                       subtitle: isDesktop
-                          ? "Table of Contents via sidebar"
-                          : "Tap center or swipe for menu",
+                          ? AppLocalizations.of(context).helpMenuDesktop
+                          : AppLocalizations.of(context).helpMenuTap,
                     ),
                   ],
                 ),

@@ -148,7 +148,7 @@ class _MyLibraryPageState extends ConsumerState<MyLibraryPage> {
               if (PlatformUtils.isDesktop)
                 IconButton(
                   onPressed: _isRefreshing ? null : _refreshLibrary,
-                  tooltip: "Sync library with storage folder",
+                  tooltip: AppLocalizations.of(context).syncLibraryTooltip,
                   icon: _isRefreshing
                       ? SizedBox(
                           width: 18,

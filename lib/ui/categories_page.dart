@@ -231,6 +231,7 @@ class GenresPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final categories = categoriesTypeValues;
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(left: 5, right: 5, top: 10),
@@ -243,9 +244,9 @@ class GenresPage extends ConsumerWidget {
                   (BuildContext context, int index) {
                     final category = categories[index];
                     return BookInfoCard(
-                      title: category.title,
+                      title: localizedCategoryTitle(l10n, category),
                       thumbnail: category.thumbnail,
-                      info: category.info,
+                      info: localizedCategoryInfo(l10n, category),
                       onClick: () {
                         Navigator.push(
                           context,
@@ -253,7 +254,8 @@ class GenresPage extends ConsumerWidget {
                             builder: (BuildContext context) {
                               return CategoryListingPage(
                                 url: category.tag,
-                                title: category.title,
+                                title: localizedCategoryTitle(
+                                    AppLocalizations.of(context), category),
                               );
                             },
                           ),
@@ -270,6 +272,77 @@ class GenresPage extends ConsumerWidget {
       ),
     );
   }
+}
+
+/// Localized display title of a genre. The English `title` on CategoryBook
+/// stays as the data key; `tag` is unique per entry, so it drives lookup.
+String localizedCategoryTitle(AppLocalizations l10n, CategoryBook category) {
+  final titles = <String, String>{
+    'list/tag/classics': l10n.genreClassics,
+    'list/tag/romance': l10n.genreRomance,
+    'list/tag/fiction': l10n.genreFiction,
+    'list/tag/young-adult': l10n.genreYoungAdult,
+    'list/tag/fantasy': l10n.genreFantasy,
+    'list/tag/science-fiction': l10n.genreScienceFiction,
+    'list/tag/non-fiction': l10n.genreNonfiction,
+    'list/tag/children': l10n.genreChildren,
+    'list/tag/history': l10n.genreHistory,
+    'list/tag/mystery': l10n.genreMystery,
+    'list/tag/covers': l10n.genreCovers,
+    'list/tag/horror': l10n.genreHorror,
+    'list/tag/historical-fiction': l10n.genreHistoricalFiction,
+    'list/tag/best': l10n.genreBest,
+    'list/tag/titles': l10n.genreTitles,
+    'list/tag/middle-grade': l10n.genreMiddleGrade,
+    'list/tag/paranormal': l10n.genreParanormal,
+    'list/tag/love': l10n.genreLove,
+    'list/tag/queer': l10n.genreQueer,
+    'list/tag/nonfiction': l10n.genreNonfictionAdult,
+    'list/tag/historical-romance': l10n.genreHistoricalRomance,
+    'list/tag/contemporary': l10n.genreContemporary,
+    'list/tag/thriller': l10n.genreThriller,
+    'list/tag/women': l10n.genreWomen,
+    'list/tag/biography': l10n.genreBiography,
+    'list/tag/lgbtq': l10n.genreLgbtq,
+    'list/tag/series': l10n.genreSeries,
+    'list/tag/title-challenge': l10n.genreTitleChallenge,
+  };
+  return titles[category.tag] ?? category.title;
+}
+
+/// Localized description of a genre, looked up by its unique tag.
+String localizedCategoryInfo(AppLocalizations l10n, CategoryBook category) {
+  final infos = <String, String>{
+    'list/tag/classics': l10n.genreClassicsDesc,
+    'list/tag/romance': l10n.genreRomanceDesc,
+    'list/tag/fiction': l10n.genreFictionDesc,
+    'list/tag/young-adult': l10n.genreYoungAdultDesc,
+    'list/tag/fantasy': l10n.genreFantasyDesc,
+    'list/tag/science-fiction': l10n.genreScienceFictionDesc,
+    'list/tag/non-fiction': l10n.genreNonfictionDesc,
+    'list/tag/children': l10n.genreChildrenDesc,
+    'list/tag/history': l10n.genreHistoryDesc,
+    'list/tag/mystery': l10n.genreMysteryDesc,
+    'list/tag/covers': l10n.genreCoversDesc,
+    'list/tag/horror': l10n.genreHorrorDesc,
+    'list/tag/historical-fiction': l10n.genreHistoricalFictionDesc,
+    'list/tag/best': l10n.genreBestDesc,
+    'list/tag/titles': l10n.genreTitlesDesc,
+    'list/tag/middle-grade': l10n.genreMiddleGradeDesc,
+    'list/tag/paranormal': l10n.genreParanormalDesc,
+    'list/tag/love': l10n.genreLoveDesc,
+    'list/tag/queer': l10n.genreQueerDesc,
+    'list/tag/nonfiction': l10n.genreNonfictionAdultDesc,
+    'list/tag/historical-romance': l10n.genreHistoricalRomanceDesc,
+    'list/tag/contemporary': l10n.genreContemporaryDesc,
+    'list/tag/thriller': l10n.genreThrillerDesc,
+    'list/tag/women': l10n.genreWomenDesc,
+    'list/tag/biography': l10n.genreBiographyDesc,
+    'list/tag/lgbtq': l10n.genreLgbtqDesc,
+    'list/tag/series': l10n.genreSeriesDesc,
+    'list/tag/title-challenge': l10n.genreTitleChallengeDesc,
+  };
+  return infos[category.tag] ?? category.info;
 }
 
 class BookInfoCard extends StatelessWidget {
