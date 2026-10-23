@@ -80,3 +80,67 @@ jobs:
           name: android-apk
           path: artifacts/*.apk
           retention-days: 14
+
+  # Keep a rolling "latest" pre-release so every push is downloadable from
+  # the Releases page without manually cutting a version. Formal, versioned
+  # releases stay with build.yml (release event).
+  release-latest:
+    name: Publish rolling latest release
+    needs: [build-apk]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Read version
+        id: version
+        run: |
+          VERSION=$(grep "^version:" pubspec.yaml | sed 's/^version: //' | cut -d'+' -f1)
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: android-apk
+          path: artifacts
+
+      - name: Normalize asset names
+        run: |
+          mkdir -p release
+          cp artifacts/*.apk release/
+          cd release
+          VER="${{ steps.version.outputs.version }}"
+          # Fixed names so each build replaces the previous assets instead
+          # of accumulating one set per run.
+          for f in openlib-android-*-"$VER"-*.apk; do
+            [ -e "$f" ] || continue
+            base="${f%-"$VER"-*.apk}"
+            mv "$f" "${base}-latest.apk"
+          done
+          ls -la
+
+      - name: Delete previous latest release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete latest --cleanup-tag --yes -R "$GITHUB_REPOSITORY" || true
+
+      - name: Create rolling latest release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: "Latest build (v${{ steps.version.outputs.version }})"
+          prerelease: true
+          body: |
+            自动构建 / Automated build from `main` @ ${{ github.sha }}
+
+            - 版本 / Version: v${{ steps.version.outputs.version }}
+            - 构建 / Run: #${{ github.run_number }}
+            - 正式版本发布请在 Releases 页面创建 Release，全平台安装包由 Build and Release 工作流自动附加。
+
+            APK 选择：regular 手机用 **arm64**，不确定就用 **universal**。
+          files: release/*.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
