@@ -18,6 +18,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 // Project imports:
+import 'package:openlib/l10n/app_localizations.dart';
 import 'package:openlib/services/instance_manager.dart';
 import 'package:openlib/services/preference_store.dart';
 import 'package:openlib/services/slum_catalogue.dart';
@@ -45,7 +46,11 @@ Future<void> _pumpPage(WidgetTester tester, InstanceManager instanceManager) {
       serviceInstancesProvider
           .overrideWith((ref, service) async => const <InstanceView>[]),
     ],
-    child: const MaterialApp(home: InstancesPage()),
+    child: const MaterialApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      home: InstancesPage(),
+    ),
   ));
 }
 

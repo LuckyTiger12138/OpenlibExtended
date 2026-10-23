@@ -21,7 +21,7 @@ Map<String, dynamic> _readArb(String locale) {
 }
 
 void main() {
-  final locales = ['en', 'de', 'fr', 'es'];
+  final locales = ['en', 'de', 'fr', 'es', 'zh'];
 
   test('generated delegates expose exactly the shipped locales', () {
     expect(AppLocalizations.supportedLocales.map((l) => l.languageCode),
@@ -74,9 +74,25 @@ void main() {
         reason: 'most strings should be really translated, not copied');
   });
 
+  test('Chinese translations actually differ from English', () {
+    final en = _readArb('en');
+    final zh = _readArb('zh');
+    var translated = 0;
+    final keys = en.keys
+        .where((k) => !k.startsWith('@') && k != '@@locale' && k != 'appTitle');
+    for (final key in keys) {
+      if (en[key] != zh[key]) translated++;
+    }
+    // zh must be a real translation, not an English copy; brand names and
+    // URLs keep matching, so the bar is a wide margin, not equality.
+    expect(translated, greaterThan(300),
+        reason: 'zh must translate nearly the whole catalog');
+  });
+
   testWidgets('localized strings resolve per locale', (tester) async {
     late AppLocalizations de;
     late AppLocalizations fr;
+    late AppLocalizations zh;
 
     await tester.pumpWidget(
       MaterialApp(
@@ -100,11 +116,25 @@ void main() {
         },
       ),
     );
+    await tester.pumpWidget(
+      MaterialApp(
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        locale: const Locale('zh'),
+        builder: (context, _) {
+          zh = AppLocalizations.of(context);
+          return const SizedBox();
+        },
+      ),
+    );
 
     expect(de.settingsTitle, 'Einstellungen');
     expect(de.cancel, 'Abbrechen');
     expect(fr.settingsTitle, 'Paramètres');
     expect(fr.cancel, 'Annuler');
+    expect(zh.settingsTitle, '设置');
+    expect(zh.cancel, '取消');
+    expect(zh.navMyLibrary, '我的书库');
   });
 
   testWidgets('the language dropdown writes the locale preference',
