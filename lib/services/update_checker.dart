@@ -622,6 +622,10 @@ class UpdateCheckerService {
     List<String> attemptedMethods = [];
     List<String> errorMessages = [];
 
+    // Resolve localized strings once, before the first await, so the
+    // method names recorded below never touch a stale BuildContext.
+    final l10n = AppLocalizations.of(context);
+
     // Check and request install permission first
     final hasPermission = await _checkAndRequestInstallPermission(context);
     if (!hasPermission) {
@@ -630,7 +634,7 @@ class UpdateCheckerService {
         _showInstallErrorDialog(
             context,
             filePath,
-            AppLocalizations.of(context).installPermissionDeniedManual,
+            l10n.installPermissionDeniedManual,
             release: release);
       }
       return false;
@@ -639,18 +643,18 @@ class UpdateCheckerService {
     // Warn about debug builds
     if (kDebugMode && context.mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
+        SnackBar(
           content: Text(
-            AppLocalizations.of(context).debugBuildWarning,
+            l10n.debugBuildWarning,
           ),
           backgroundColor: Colors.orange,
-          duration: Duration(seconds: 10),
+          duration: const Duration(seconds: 10),
         ),
       );
     }
 
     // Method 1: Try open_file (Most standard method)
-    attemptedMethods.add(AppLocalizations.of(context).methodOpenFile);
+    attemptedMethods.add(l10n.methodOpenFile);
     try {
       _logger.info("Attempting installation with open_file",
           tag: "UpdateChecker");
@@ -695,7 +699,7 @@ class UpdateCheckerService {
     }
 
     // Method 2: Try apk_sideload
-    attemptedMethods.add(AppLocalizations.of(context).methodApkSideload);
+    attemptedMethods.add(l10n.methodApkSideload);
     try {
       _logger.info("Attempting installation with apk_sideload",
           tag: "UpdateChecker");
@@ -714,9 +718,7 @@ class UpdateCheckerService {
               onPressed: () {
                 if (context.mounted) {
                   _showInstallFallbackDialog(context, filePath,
-                      attemptedMethods,
-                      [AppLocalizations.of(context).mayHaveFailedSilently],
-                      release);
+                      attemptedMethods, [l10n.mayHaveFailedSilently], release);
                 }
               },
             ),
@@ -737,7 +739,7 @@ class UpdateCheckerService {
     }
 
     // Method 3: Try android_package_installer
-    attemptedMethods.add(AppLocalizations.of(context).methodPackageInstaller);
+    attemptedMethods.add(l10n.methodPackageInstaller);
     try {
       _logger.info("Attempting installation with android_package_installer",
           tag: "UpdateChecker");
@@ -764,7 +766,7 @@ class UpdateCheckerService {
                           context,
                           filePath,
                           attemptedMethods,
-                          [AppLocalizations.of(context).mayHaveFailedSilently],
+                          [l10n.mayHaveFailedSilently],
                           release);
                     }
                   },
@@ -1071,8 +1073,8 @@ class UpdateCheckerService {
         if (context.mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: Text(
-                AppLocalizations.of(context).failedInstallUpdate(e.toString())),
+              content: Text(AppLocalizations.of(context)
+                  .failedInstallUpdate(e.toString())),
               backgroundColor: Colors.red,
             ),
           );
@@ -1422,13 +1424,13 @@ class _UpdateDownloadDialogState extends State<_UpdateDownloadDialog> {
               ),
             ),
           ] else if (_downloadComplete) ...[
-            const Row(
+            Row(
               children: [
-                Icon(Icons.check, color: Colors.green, size: 20),
-                SizedBox(width: 8),
+                const Icon(Icons.check, color: Colors.green, size: 20),
+                const SizedBox(width: 8),
                 Text(
                   AppLocalizations.of(context).openingInstallerShort,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.green,
                     fontSize: 13,
                     fontWeight: FontWeight.w500,

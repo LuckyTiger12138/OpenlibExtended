@@ -30,9 +30,16 @@ enum DownloadStatus {
 /// Localized strings from the global navigator context, or null before
 /// the app has built its first frame (callers fall back to English).
 AppLocalizations? _l10n() {
-  final context = appNavigatorKey.currentContext;
-  if (context == null) return null;
-  return AppLocalizations.of(context);
+  // GlobalKey.currentContext asserts while the widget binding is down
+  // (e.g. plain unit tests) instead of returning null - treat that as
+  // "no localization available" as well.
+  try {
+    final context = appNavigatorKey.currentContext;
+    if (context == null) return null;
+    return AppLocalizations.of(context);
+  } catch (_) {
+    return null;
+  }
 }
 
 /// Human label for a download mirror's host, shown in notifications

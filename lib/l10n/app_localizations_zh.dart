@@ -58,7 +58,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String resultsFor(String query) {
-    return '“${query}”的搜索结果';
+    return '“$query”的搜索结果';
   }
 
   @override
@@ -149,7 +149,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String couldNotLaunch(String url) {
-    return '无法打开 ${url}';
+    return '无法打开 $url';
   }
 
   @override
@@ -254,7 +254,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String failedExportLogs(String error) {
-    return '导出日志失败：${error}';
+    return '导出日志失败：$error';
   }
 
   @override
@@ -268,7 +268,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String rankingFailed(String error) {
-    return '测速失败：${error}';
+    return '测速失败：$error';
   }
 
   @override
@@ -282,12 +282,12 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String onLatestVersion(String version) {
-    return '您已是最新版本（${version}）';
+    return '您已是最新版本（$version）';
   }
 
   @override
   String failedCheckUpdates(String error) {
-    return '检查更新失败：${error}';
+    return '检查更新失败：$error';
   }
 
   @override
@@ -304,7 +304,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String failedExportBackup(String error) {
-    return '导出备份失败：${error}';
+    return '导出备份失败：$error';
   }
 
   @override
@@ -312,7 +312,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String failedImportBackup(String error) {
-    return '导入备份失败：${error}';
+    return '导入备份失败：$error';
   }
 
   @override
@@ -320,7 +320,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String rankedFastest(String name, String time) {
-    return '测速完成！最快：${name}（${time}ms）';
+    return '测速完成！最快：$name（${time}ms）';
   }
 
   @override
@@ -355,7 +355,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String testingFailed(String error) {
-    return '测试失败：${error}';
+    return '测试失败：$error';
   }
 
   @override
@@ -390,7 +390,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String deleteMirrorConfirm(String name) {
-    return '确定要删除“${name}”吗？';
+    return '确定要删除“$name”吗？';
   }
 
   @override
@@ -407,7 +407,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String errorLabel(String error) {
-    return '错误：${error}';
+    return '错误：$error';
   }
 
   @override
@@ -624,7 +624,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String addServiceMirror(String title) {
-    return '添加 ${title} 镜像';
+    return '添加 $title 镜像';
   }
 
   @override
@@ -641,7 +641,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String searchingOn(String source) {
-    return '来自 ${source} 的搜索结果';
+    return '来自 $source 的搜索结果';
   }
 
   @override
@@ -655,7 +655,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String downloadFrom(String source) {
-    return '正在从 ${source} 下载';
+    return '正在从 $source 下载';
   }
 
   @override
@@ -666,7 +666,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String whatsNewTitle(String version) {
-    return '${version} 更新内容';
+    return '$version 更新内容';
   }
 
   @override
@@ -1035,12 +1035,12 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String mirrorListUpdated(String count) {
-    return '镜像列表已更新：${count} 处变更';
+    return '镜像列表已更新：$count 处变更';
   }
 
   @override
   String mirrorRefreshFailed(String error) {
-    return '刷新失败：${error}';
+    return '刷新失败：$error';
   }
 
   @override
@@ -1142,7 +1142,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String errorLoadingBook(String error) {
-    return '加载书籍出错：${error}';
+    return '加载书籍出错：$error';
   }
 
   @override
@@ -1153,11 +1153,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get installPermissionBody =>
-      '安装应用更新需要 OpenlibExtended 获得安装应用的权限。
-
-这允许应用自动安装包含错误修复和新功能的新版本。
-
-接下来将前往系统设置开启该权限。';
+      '安装应用更新需要 OpenlibExtended 获得安装应用的权限。\n\n这允许应用自动安装包含错误修复和新功能的新版本。\n\n接下来将前往系统设置开启该权限。';
 
   @override
   String get openSettings => '打开设置';
@@ -1167,7 +1163,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String downloadedFileCorrupted(String size) {
-    return '已下载的文件似乎已损坏（仅 ${size}）';
+    return '已下载的文件似乎已损坏（仅 $size）';
   }
 
   @override
@@ -1190,7 +1186,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String failedInstallUpdate(String error) {
-    return '安装更新失败：${error}';
+    return '安装更新失败：$error';
   }
 
   @override
@@ -1198,13 +1194,11 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get installFallbackBody =>
-      '自动安装程序无法打开 APK。某些 Android 版本上可能出现这种情况。
-
-您可以选用以下方式手动安装：';
+      '自动安装程序无法打开 APK。某些 Android 版本上可能出现这种情况。\n\n您可以选用以下方式手动安装：';
 
   @override
   String fileLabel(String fileName) {
-    return '文件：${fileName}';
+    return '文件：$fileName';
   }
 
   @override
@@ -1218,7 +1212,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String methodN(String number) {
-    return '方式 ${number}';
+    return '方式 $number';
   }
 
   @override
@@ -1238,7 +1232,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String versionIsAvailable(String version) {
-    return '新版本 ${version} 现已发布！';
+    return '新版本 $version 现已发布！';
   }
 
   @override
@@ -1276,12 +1270,12 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String notifAlreadyDownloading(String title) {
-    return '已在下载中：${title}';
+    return '已在下载中：$title';
   }
 
   @override
   String notifQueued(String title) {
-    return '已加入队列：${title}';
+    return '已加入队列：$title';
   }
 
   @override
@@ -1295,7 +1289,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String notifDownloadingFrom(String source) {
-    return '正在从 ${source} 下载……';
+    return '正在从 $source 下载……';
   }
 
   @override
@@ -1303,7 +1297,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String notifDownloadingProgress(String percent) {
-    return '下载中……${percent}%';
+    return '下载中……$percent%';
   }
 
   @override
@@ -1311,7 +1305,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String notifFailed(String message) {
-    return '失败：${message}';
+    return '失败：$message';
   }
 
   @override
@@ -1331,7 +1325,6 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String versionShort(String version) {
-    return '版本 ${version}';
+    return '版本 $version';
   }
-
 }

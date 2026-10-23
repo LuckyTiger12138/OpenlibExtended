@@ -2582,7 +2582,6 @@ abstract class AppLocalizations {
   /// **'Download completed (checksum failed)'**
   String get notifDownloadCompletedChecksumFailed;
 
-
   /// UI string extracted for full Chinese localization
   ///
   /// In en, this message translates to:
@@ -2600,7 +2599,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Version {version}'**
   String versionShort(String version);
-
 }
 
 class _AppLocalizationsDelegate

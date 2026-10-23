@@ -93,6 +93,8 @@ void main() {
     late WidgetRef capturedRef;
     await tester.pumpWidget(ProviderScope(
       child: MaterialApp(
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
         home: Scaffold(
           body: Builder(
             builder: (context) => ElevatedButton(

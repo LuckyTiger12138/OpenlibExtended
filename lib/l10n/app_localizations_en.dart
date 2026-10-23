@@ -1083,12 +1083,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String mirrorListUpdated(String count) {
-    return 'Mirror list updated: ${count} change(s)';
+    return 'Mirror list updated: $count change(s)';
   }
 
   @override
   String mirrorRefreshFailed(String error) {
-    return 'Refresh failed: ${error}';
+    return 'Refresh failed: $error';
   }
 
   @override
@@ -1197,7 +1197,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String errorLoadingBook(String error) {
-    return 'Error loading book: ${error}';
+    return 'Error loading book: $error';
   }
 
   @override
@@ -1208,11 +1208,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get installPermissionBody =>
-      'To install app updates, OpenlibExtended needs permission to install packages.
-
-This allows the app to automatically install new versions with bug fixes and new features.
-
-You will be taken to Settings to enable this permission.';
+      'To install app updates, OpenlibExtended needs permission to install packages.\n\nThis allows the app to automatically install new versions with bug fixes and new features.\n\nYou will be taken to Settings to enable this permission.';
 
   @override
   String get openSettings => 'Open Settings';
@@ -1222,7 +1218,7 @@ You will be taken to Settings to enable this permission.';
 
   @override
   String downloadedFileCorrupted(String size) {
-    return 'Downloaded file appears to be corrupted (only ${size})';
+    return 'Downloaded file appears to be corrupted (only $size)';
   }
 
   @override
@@ -1248,7 +1244,7 @@ You will be taken to Settings to enable this permission.';
 
   @override
   String failedInstallUpdate(String error) {
-    return 'Failed to install update: ${error}';
+    return 'Failed to install update: $error';
   }
 
   @override
@@ -1256,13 +1252,11 @@ You will be taken to Settings to enable this permission.';
 
   @override
   String get installFallbackBody =>
-      'The automatic installer couldn\'t open the APK. This can happen on some Android versions.
-
-You can install manually using one of these options:';
+      'The automatic installer couldn\'t open the APK. This can happen on some Android versions.\n\nYou can install manually using one of these options:';
 
   @override
   String fileLabel(String fileName) {
-    return 'File: ${fileName}';
+    return 'File: $fileName';
   }
 
   @override
@@ -1276,7 +1270,7 @@ You can install manually using one of these options:';
 
   @override
   String methodN(String number) {
-    return 'Method ${number}';
+    return 'Method $number';
   }
 
   @override
@@ -1296,7 +1290,7 @@ You can install manually using one of these options:';
 
   @override
   String versionIsAvailable(String version) {
-    return 'Version ${version} is available!';
+    return 'Version $version is available!';
   }
 
   @override
@@ -1334,12 +1328,12 @@ You can install manually using one of these options:';
 
   @override
   String notifAlreadyDownloading(String title) {
-    return 'Already downloading: ${title}';
+    return 'Already downloading: $title';
   }
 
   @override
   String notifQueued(String title) {
-    return 'Queued: ${title}';
+    return 'Queued: $title';
   }
 
   @override
@@ -1353,7 +1347,7 @@ You can install manually using one of these options:';
 
   @override
   String notifDownloadingFrom(String source) {
-    return 'Downloading from ${source}...';
+    return 'Downloading from $source...';
   }
 
   @override
@@ -1361,7 +1355,7 @@ You can install manually using one of these options:';
 
   @override
   String notifDownloadingProgress(String percent) {
-    return 'Downloading... ${percent}%';
+    return 'Downloading... $percent%';
   }
 
   @override
@@ -1369,7 +1363,7 @@ You can install manually using one of these options:';
 
   @override
   String notifFailed(String message) {
-    return 'Failed: ${message}';
+    return 'Failed: $message';
   }
 
   @override
@@ -1390,6 +1384,6 @@ You can install manually using one of these options:';
 
   @override
   String versionShort(String version) {
-    return 'Version ${version}';
+    return 'Version $version';
   }
 }
