@@ -62,6 +62,30 @@ void main() {
     }
   });
 
+  test('every message with placeholders declares them in metadata', () {
+    // gen-l10n (pubspec generate: true) fails the build when a message
+    // uses {placeholders} that the @entry does not define.
+    final template = _readArb('en');
+    final placeholderPattern = RegExp(r'\{(\w+)\}');
+    final keys = template.keys
+        .where((k) => !k.startsWith('@') && k != '@@locale')
+        .toSet();
+    for (final key in keys) {
+      final used = placeholderPattern
+          .allMatches(template[key] as String)
+          .map((m) => m.group(1)!)
+          .toSet();
+      if (used.isEmpty) continue;
+      final meta = template['@$key'] as Map<String, dynamic>;
+      expect(meta, contains('placeholders'),
+          reason: 'key $key uses $used but declares no placeholders');
+      final declared =
+          (meta['placeholders'] as Map<String, dynamic>).keys.toSet();
+      expect(declared, used,
+          reason: 'key $key: declared placeholders must match used ones');
+    }
+  });
+
   test('German translations actually differ from English', () {
     final en = _readArb('en');
     final de = _readArb('de');

@@ -1402,11 +1402,21 @@
   },
   "mirrorListUpdated": "Mirror list updated: {count} change(s)",
   "@mirrorListUpdated": {
-    "description": "UI string extracted for full Chinese localization"
+    "description": "UI string extracted for full Chinese localization",
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
   },
   "mirrorRefreshFailed": "Refresh failed: {error}",
   "@mirrorRefreshFailed": {
-    "description": "UI string extracted for full Chinese localization"
+    "description": "UI string extracted for full Chinese localization",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "mirrorsIntro": "Mirror addresses and their status come from open-slum.org and refresh automatically. A mirror reported DOWN is never contacted.",
   "@mirrorsIntro": {
@@ -1538,7 +1548,12 @@
   },
   "errorLoadingBook": "Error loading book: {error}",
   "@errorLoadingBook": {
-    "description": "UI string extracted for full Chinese localization"
+    "description": "UI string extracted for full Chinese localization",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "couldNotOpenLink": "Could not open the link.",
   "@couldNotOpenLink": {
@@ -1562,7 +1577,12 @@
   },
   "downloadedFileCorrupted": "Downloaded file appears to be corrupted (only {size})",
   "@downloadedFileCorrupted": {
-    "description": "UI string extracted for full Chinese localization"
+    "description": "UI string extracted for full Chinese localization",
+    "placeholders": {
+      "size": {
+        "type": "String"
+      }
+    }
   },
   "installPermissionDeniedManual": "Permission to install apps was denied. You can still install manually.",
   "@installPermissionDeniedManual": {
@@ -1590,7 +1610,12 @@
   },
   "failedInstallUpdate": "Failed to install update: {error}",
   "@failedInstallUpdate": {
-    "description": "UI string extracted for full Chinese localization"
+    "description": "UI string extracted for full Chinese localization",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   },
   "installationIssue": "Installation Issue",
   "@installationIssue": {
@@ -1602,7 +1627,12 @@
   },
   "fileLabel": "File: {fileName}",
   "@fileLabel": {
-    "description": "UI string extracted for full Chinese localization"
+    "description": "UI string extracted for full Chinese localization",
+    "placeholders": {
+      "fileName": {
+        "type": "String"
+      }
+    }
   },
   "installationFailed": "Installation Failed",
   "@installationFailed": {
@@ -1618,7 +1648,12 @@
   },
   "methodN": "Method {number}",
   "@methodN": {
-    "description": "UI string extracted for full Chinese localization"
+    "description": "UI string extracted for full Chinese localization",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
   },
   "installationError": "Installation Error",
   "@installationError": {
@@ -1642,7 +1677,12 @@
   },
   "versionIsAvailable": "Version {version} is available!",
   "@versionIsAvailable": {
-    "description": "UI string extracted for full Chinese localization"
+    "description": "UI string extracted for full Chinese localization",
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
   },
   "preRelease": "Pre-release",
   "@preRelease": {
@@ -1690,11 +1730,21 @@
   },
   "notifAlreadyDownloading": "Already downloading: {title}",
   "@notifAlreadyDownloading": {
-    "description": "UI string extracted for full Chinese localization"
+    "description": "UI string extracted for full Chinese localization",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
   },
   "notifQueued": "Queued: {title}",
   "@notifQueued": {
-    "description": "UI string extracted for full Chinese localization"
+    "description": "UI string extracted for full Chinese localization",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
   },
   "notifPaused": "Paused",
   "@notifPaused": {
@@ -1710,7 +1760,12 @@
   },
   "notifDownloadingFrom": "Downloading from {source}...",
   "@notifDownloadingFrom": {
-    "description": "UI string extracted for full Chinese localization"
+    "description": "UI string extracted for full Chinese localization",
+    "placeholders": {
+      "source": {
+        "type": "String"
+      }
+    }
   },
   "notifDownloading": "Downloading",
   "@notifDownloading": {
@@ -1718,7 +1773,12 @@
   },
   "notifDownloadingProgress": "Downloading... {percent}%",
   "@notifDownloadingProgress": {
-    "description": "UI string extracted for full Chinese localization"
+    "description": "UI string extracted for full Chinese localization",
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
   },
   "notifDownload": "Download",
   "@notifDownload": {
@@ -1726,7 +1786,12 @@
   },
   "notifFailed": "Failed: {message}",
   "@notifFailed": {
-    "description": "UI string extracted for full Chinese localization"
+    "description": "UI string extracted for full Chinese localization",
+    "placeholders": {
+      "message": {
+        "type": "String"
+      }
+    }
   },
   "notifVerifyingFile": "Verifying file...",
   "@notifVerifyingFile": {
@@ -1750,6 +1815,11 @@
   },
   "versionShort": "Version {version}",
   "@versionShort": {
-    "description": "UI string extracted for full Chinese localization"
+    "description": "UI string extracted for full Chinese localization",
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
   }
 }
